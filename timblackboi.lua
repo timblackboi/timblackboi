@@ -181,8 +181,16 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if input.KeyCode == Enum.KeyCode.RightShift then
         AimbotEnabled = not AimbotEnabled
         EspEnabled = AimbotEnabled
-        FullbrightEnabled = AimbotEnabled
         FOVCircle.Visible = AimbotEnabled
+    end
+end)
+
+-- right alt for fullbright
+FullbrightEnabled == false
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.RightAlt then
+        FullbrightEnabled != FullbrightEnabled
         toggleFullbright(FullbrightEnabled)
     end
 end)
