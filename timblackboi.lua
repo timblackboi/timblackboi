@@ -185,11 +185,11 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
     end
 end)
 
--- right alt for fullbright
+-- right ctrl for fullbright
 FullbrightEnabled == false
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
-    if input.KeyCode == Enum.KeyCode.RightAlt then
+    if input.KeyCode == Enum.KeyCode.RightControl then
         FullbrightEnabled != FullbrightEnabled
         toggleFullbright(FullbrightEnabled)
     end
